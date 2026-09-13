@@ -584,3 +584,22 @@ footer {
         justify-content: center;
     }
 }
+
+@media print {
+  /* Forces the browser to print background colors and images */
+  body, * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Removes default browser margins and sets standard paper size */
+  @page {
+    size: A4 portrait;
+    margin: 0; 
+  }
+
+  /* Optional: Hide elements you don't want in the PDF (like navbars or buttons) */
+  .no-print {
+    display: none !important;
+  }
+}
